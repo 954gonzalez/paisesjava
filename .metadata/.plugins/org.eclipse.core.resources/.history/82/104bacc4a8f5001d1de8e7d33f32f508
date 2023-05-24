@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.swing.JOptionPane;
+
+public class Procesos {
+	 HashMap<String, ArrayList<String>>map;
+	 ArrayList<String>ciudades;
+	public Procesos() {
+		
+		 
+		map=new  HashMap<String, ArrayList<String>>();
+		
+	   registrarDatos();
+	   ciudades=new ArrayList<String>();
+	}
+
+	
+	
+	
+	private void registrarDatos() {
+		
+		
+				
+		String pais =JOptionPane.showInputDialog("ingrese el pais");
+		
+		int cant=Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de ciudades"));
+		
+		for (int i = 0; i < cant; i++) {
+			String ciudad=JOptionPane.showInputDialog("ingrese la ciudad: "+ (i+1));
+			ciudades.add(ciudad);
+		}
+		
+		map.put(pais,ciudades);
+		
+		System.out.println(map);
+		
+	}
+	
+	
+}
